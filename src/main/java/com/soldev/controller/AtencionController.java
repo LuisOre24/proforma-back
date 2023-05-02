@@ -60,7 +60,7 @@ public class AtencionController {
 		return ResponseEntity.created(location).build();
 	}
 	@PutMapping()
-	public ResponseEntity<Object> actualizarMarca(@RequestBody Atencion entity){
+	public ResponseEntity<Object> actualizarAtencion(@RequestBody Atencion entity){
 		
 		Atencion atencion = service.actualizar(entity);
 		

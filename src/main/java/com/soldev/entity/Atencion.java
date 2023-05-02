@@ -30,7 +30,7 @@ public class Atencion {
     @Column(name = "detalle_entrega")
     private String detalleEntrega;
 
-    @OneToMany(mappedBy = "atencion", cascade = { CascadeType.ALL }, orphanRemoval = true )
+    @OneToMany(mappedBy = "atencion", cascade = { CascadeType.PERSIST, CascadeType.REFRESH }, orphanRemoval = true )
     private List<DetallePago> detallePago;
 
     private Double costoAtencion;
